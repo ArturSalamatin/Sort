@@ -40,6 +40,5 @@ class test_vector
 {
 public:
 	static void test_1();
-
 };
 

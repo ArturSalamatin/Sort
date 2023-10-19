@@ -114,9 +114,11 @@ ptrdiff_t Vector::partition_lomuto(Vector& vec, ptrdiff_t low, ptrdiff_t high)
 		{
 			std::swap(vec[i], vec[j]);
 			i++;
+			std::cout << vec.status() << std::endl;
 		}
 	}
 	std::swap(vec[high], vec[i]);
+	std::cout << vec.status() << std::endl;
 	return i;
 }
 
@@ -135,10 +137,12 @@ ptrdiff_t Vector::partition_hoare(Vector& vec, ptrdiff_t low, ptrdiff_t high)
 		{
 			std::swap(vec[i], vec[j]);
 			++i; --j;
+			std::cout << vec.status() << std::endl;
 		}
 		else
 		{
 			std::swap(vec[low], vec[j]);
+			std::cout << vec.status() << std::endl;
 			return j;
 		}
 	}
